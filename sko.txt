@@ -1,0 +1,10 @@
+@echo off
+REM Get current permission level.
+whoami
+REM Ping faux attack infrastructure.
+ping -n 1 8.8.8.8
+REM Collect system information into text file.
+netstat -rn >> C:\Users\%username%\AppData\Temp\a.txt
+systeminfo >> C:\Users\%username%\AppData\Temp\a.txt
+net group "Domain Admins" /domain >> C:\Users\%username%\AppData\Temp\a.txt
+
